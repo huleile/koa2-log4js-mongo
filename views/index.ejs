@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>EJS Welcome to <%= title %></p>
+    <% for(let u of user) { %>
+      <ul>
+        <li><%=u.name%></li>
+        <li><%=u.age%></li>
+        <li><%=formatDate(u.birth, 'YYYY-MM-DD HH:mm:ss')%></li>
+      </ul>
+    <% } %>
+  </body>
+</html>
